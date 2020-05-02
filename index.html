@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Profile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- add google font -->
+
+	<!-- add font awesom icon -->
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		.primary-colors{
+			color: #fff;
+			background: #f44336;
+
+		}
+		.secondary-colors{
+			color: #fff;
+			background: #ef5350;
+		}
+
+		body{
+			margin: 0px;
+			font-family: sans-serif;
+		}
+		#header{
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+		#header .profile-summary{
+			padding: 16px;
+			flex: 1;
+		}
+		#header .profile-pic{
+			width: 100px;
+			height: 100px;
+			background: url("pic1.jpg");
+			background-size: cover;
+			background-position: 50% 50%;
+			margin: 8px;
+			border: 4px solid #fff;
+			border-radius: 50%;
+			box-shadow: inset -4px -4px 16px rgba(0,0,0,0.7);
+		}
+		
+		#header .profile-summary h1{
+			margin: 0px;
+		}
+		#contacts{
+			display: flex;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+		}
+		#contacts a{
+			flex: 1;
+			padding: 12px 8px;
+			text-align: center;
+			color: inherit;
+			text-decoration: none;
+		}
+		#contacts a:hover{
+			background: rgba(255,255,255,0.2);
+		}
+		i.fas{
+			margin-right: 8px;
+		}
+		#main{
+			display: flex;
+		}
+		#main .long-details{
+			padding: 16px;
+			flex: 2;
+		}
+		#main .short-details{
+			padding: 16px;
+			flex: 1;
+		}
+		.section-head{
+			display: inline-block;
+			padding: 12px 16px;
+			border-radius: 50px;
+			margin: 8px 0 0 8px;
+			box-shadow: 4px 4px 16px rgba(0,0,0,0.3)
+		}
+		#main .timeline{
+			padding: 12px 16px;
+			width: 100%;
+		}
+		#main .timeline td{
+			vertical-align: top;
+			padding-left: 16px;
+		}
+		#main .timeline .time{
+			width: 20%;
+		}
+		ul.circle-bullet{
+			list-style-type: none;
+			padding-left: 0;
+			margin-top: 4px;
+		}
+		ul.circle-bullet li{
+			margin: 8px 0;
+		}
+		ul.circle-bullet li:before{
+			font-family: serif;
+			content: "\f111";
+			font-size: small;
+			vertical-align: 10%;
+		}
+		.skills + ul{
+			list-style-type: none;
+			padding-left: 16px;
+		}
+		.skills + ul li:before{
+			font-family: serif;
+			content: "\f005";
+			font-size: small;
+			vertical-align: 10%;
+			margin-right: 2px;
+			font-weight: 900;
+
+		}
+		.progress{
+			width: 100%;
+			margin: 8px 4px 8px 0;
+		}
+		.progress .full,
+		.progress .current{
+			height: 6px;
+			width: 100%;
+			/*background: #000;*/
+			border-radius: 50px;
+			transform: skew(-30deg);
+		}
+		.progress .full{
+			margin-top: 2px;
+			opacity: 0.5;
+		}
+		ul.circle-bullet.type2{
+			padding-left: 16px;
+			padding-top: 16px; 
+		}
+		.section-head.bordered{
+			background: #fff;
+			border: 1px solid #000;
+		}
+		@media screen and (max-width: 600px){
+
+			#header{
+			flex-direction: column;
+		}
+		#header .profile-summary{
+			text-align: center;
+			padding-top: 0;
+			
+		}
+		#header .profile-pic{
+			margin: 16px 16px 0;
+		}
+		#contacts{
+			display: block;
+			padding: 8px 16px;
+			line-height: 2em;
+		}
+		#contacts a{
+			padding: 0 16px 0 0;
+		}
+		#contacts a:hover{
+			background: none;
+			text-shadow: 0 0 16px #fff;
+		}
+		#main{
+			display: block;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div id="header" class="primary-colors">
+		<div class="profile-pic"></div>
+		<div class="profile-summary">
+		<h1>Ajit Kumar</h1>
+		<p>To obtain a position that will allow me to utilize my technical skills, experience and willingness to learn in making an organization successful. </p>
+		</div>
+	</div>
+	<div id="contacts" class="secondary-colors">
+		<a href="tel:+91-8210647413"><i class="fas fa-mobile-alt"></i>+91-8210647413</a>
+		<a href="mailto:kajit043@gmail.com"><i class="fas fa-envelope"></i>kajit043@gmail.com</a>
+		<a href="https://maps.google.com/?q=Barun,Aurangabad(Bihar)" target="_blank"><i class="fas fa-map-marker-alt"></i>Barun,Aurangabad(Bihar)
+		</a>
+	</div>
+	<div id="main">
+		<div class="long-details">
+			<h3 class="primary-colors section-head">
+				<i class="fas fa-graduation-cap"></i>
+			Education:
+		</h3>
+		<table class="timeline">
+			<tr class="">
+				<td class="time">2013-14</td>
+				<td class="event">10th, CBSE
+					<br>
+					9.2 cgpa
+				</td>
+				
+			</tr>
+			<tr class="">
+				<td class="time">2014-16</td>
+				<td class="event">12th, BSEB
+					<br>
+					69.25%;
+				</td>
+				
+			</tr>
+			<tr class="">
+				<td class="time">2016-20</td>
+				<td class="event">B.tech in Computer Science Engineering
+
+					<br>
+					Sityog Institute of Technology
+					<br>
+					8.03cgpa(Pursuing)
+				</td>
+				
+			</tr>
+		</table>
+		<h3 class="primary-colors section-head">
+				<i class="fas fa-business-time"></i>
+			Experience:
+		</h3>
+		<table class="timeline">
+			<tr class="">
+				<td class="time">Freshers:</td>
+				<td class="event">0-0 years;</td>
+				
+			</tr>
+			
+			
+		</table>
+		<h3 class="primary-colors section-head">
+				<i class="fas fa-drafting-compass"></i>
+			Projects:
+		</h3>
+		<table class="timeline">
+			<tr class="">
+				<td class="time">Oct-Nov,2019</td>
+				<td class="event">Task Reminder Android Application
+					<ul class="circle-bullet">
+						<li>Built an Android app using JAVA,XML,Google Firebase</li>
+						<li>We have used Android Studio IDE </li>
+					</ul>
+					
+				</td>
+				
+			</tr>
+			<tr class="">
+				<td class="time">Jan-April,2020</td>
+				<td class="event">Notes Sharing System
+					<ul class="circle-bullet">
+						<li>Built a web application using HTML5,CSS3,Javascript,jQuery, Bootstrap,PHP and Mysql.</li>
+						<li>We have used Sublime Text Editor IDE.</li>
+					</ul>
+					
+				</td>
+				
+			</tr>
+			
+			
+		</table>
+
+
+		<h3 class="primary-colors section-head">
+				<i class="fas fa-user-alt"></i>
+			Pesonal Information:
+		</h3>
+		<table class="timeline">
+			<tr class="">
+				<td class="time">07-07-1999:</td>
+				<td class="event">Date of Birth
+					<ul class="circle-bullet">
+						
+					</ul>
+					
+				</td>
+				
+			</tr>
+			<tr class="">
+				<td class="time">Indian:</td>
+				<td class="event">Nationality
+					<ul class="circle-bullet">
+						
+					</ul>
+					
+				</td>
+				
+			</tr>
+			<tr class="">
+				<td class="time">Hobbies:</td>
+				<td class="event">Playing Cricket<br>
+					Reading Books<br>Listening Music
+					<ul class="circle-bullet">
+						
+					</ul>
+					
+				</td>
+				
+			</tr>
+			
+			
+		</table>
+
+
+
+
+		</div>
+		<div class="short-details">
+			<h3 class="primary-colors skills section-head">
+				<i class="fas fa-star"></i>
+			Skills:
+		</h3>
+
+			<ul>
+				<li>HTML</li>
+				<div class="progress">
+					<div class="current primary-colors"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>CSS3</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 90%;"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>Javascript</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 70%;"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>PHP</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 80%;"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>MYSQL</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 70%;"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>Jquery</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 60%"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>C/C++</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 90%;"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>Java</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 70%;"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+				<li>Python</li>
+					<div class="progress">
+					<div class="current primary-colors" style="width: 60%;"></div>
+					<div class="full secondary-colors"></div>
+				</div>
+			</ul>
+			<h3 class="primary-colors  section-head">
+				<i class="fas fa-award"></i>
+			Awards:
+		</h3>
+			<ul class="circle-bullet type2">
+				<li>I got <strong>2<sup>nd</sup></strong> position in Android App development at Graviton's Tech Fest GCE,Gaya.</li>
+				<li>I got a Certificate on the completition of <strong>NPTEL</strong> online classes in Mthematics & Calculation which is organised by <strong>IIT,Madras</strong></li>
+				
+			</ul>
+
+			<h3 class="primary-colors  section-head">
+				<i class="fas fa-archive"></i>
+			Extra-Curricular:
+		</h3>
+			<ul class="circle-bullet type2">
+				<li>Attend a 2 days workshop on <strong>Android App Development</strong> at <strong>IIT,Patna.</strong></li>
+				<li>Attend a <strong>4 week</strong>vocational Training in <strong>PHP & MYSQL</strong> at <strong>BSNL(ARTTC,Ranchi)</strong>. </li>
+				
+			</ul>
+
+			<h3 class="primary-colors  section-head">
+				<i class="fas fa-address-book"></i>
+			Strengths:
+		</h3>
+			<ul class="circle-bullet type2">
+				<li>Punctual and Sincere.</strong></li>
+				<li>Confident and Eager to Learn.</li>
+				<li>Good Listener and Effective Communicator.</li>
+				
+			</ul>
+
+
+			<h3 class="section-head bordered">
+				<i class="fas fa-globe"></i>
+			English & Hindi:
+		</h3>
+
+		</div>
+		
+	</div>
+</body>
+</html>
